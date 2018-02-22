@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetailsCRUDi.Views.OpeningPage">
+    <ContentPage.Content>
+        <StackLayout 
+            Orientation="Vertical" 
+            HorizontalOptions="Center" 
+            VerticalOptions="Start">
+            
+            <Label 
+                Margin="40,40,0,40" 
+                FontSize="40"
+                Text="Welcome to Class Dungeon"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                
+            <Image 
+                Source="d20.png" 
+                VerticalOptions="Center" 
+                HeightRequest="150"
+                HorizontalOptions="Fill"/>
+
+            <Button Margin="0,10,0,0" 
+                    Text="User Battle" 
+                    Command="{Binding UserBattleCommand}" 
+                    BackgroundColor="{StaticResource Primary}" 
+                    HorizontalOptions="Center"
+                    TextColor="White" />
+
+            <Button Margin="0,10,0,0" 
+                    Text="Auto Battle" 
+                    Command="{Binding AutoBattleCommand}" 
+                    HorizontalOptions="Center"
+                    TextColor="White" />
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

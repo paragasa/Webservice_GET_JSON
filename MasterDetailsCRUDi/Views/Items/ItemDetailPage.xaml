@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MasterDetailsCRUDi.Views.ItemDetailPage"
+             Title="{Binding Title}">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Edit" Clicked="Edit_Clicked" />
+        <ToolbarItem Text="Delete" Clicked="Delete_Clicked" />
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+    <StackLayout Spacing="20" Padding="15">
+
+        <Label Text="Items Detail Page" FontSize="Small" />
+        <Image Source="{Binding Data.ImageURI}"
+                WidthRequest="100" HeightRequest="100" />
+        <Label Text="Text:" FontSize="Medium" />
+        <Label Text="{Binding Data.Name}" FontSize="Small"/>
+        
+        <Label Text="Description:" FontSize="Medium" />
+        <Label Text="{Binding Data.Description}" FontSize="Small"/>
+
+        <Label Text="Range" FontSize="Medium" />
+        <Label Text="{Binding Data.Range}" FontSize="Small" />
+
+        <Label Text="Value" FontSize="Medium" />
+        <Label Text="{Binding Data.Value}" FontSize="Small" />
+
+        <Label Text="Location" FontSize="Medium" />
+        <Label Text="{Binding Data.Location}" FontSize="Small" />
+
+        <Label Text="Attribute" FontSize="Medium" />
+        <Label Text="{Binding Data.Attribute}" FontSize="Small" />
+
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
